@@ -3,7 +3,6 @@
 	copyright @ medantechno.com
 	2017
 	*/
-	date_default_timezone_set('Asia/Singapore');
 	require_once('./line_class.php');
 	$channelAccessToken = 'foHivR9RW1cwM7LwHhSBOPTAjGa8o8kbmomtLhC906UPPWoB1gIsMhCXh7oE9bGA4HcnU1iGygo06OflcHmU827yGqF3qGQtwPReKwcx+QTOKHKqRFcCDFysPvqeHESKUm4Ey4gPabfHkJeT5FzOdQdB04t89/1O/w1cDnyilFU='; //sesuaikan 
 	$channelSecret = 'c1ab49d4f21251d9632f634a25605d24';//sesuaikan
@@ -101,7 +100,7 @@
 					
 		}
 		else
-		if($pesan_datang=='4')
+		if($pesan_datang=='Jam')
 		{
 			
 			$balas = array(
@@ -109,7 +108,7 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => 'Jam Server Saya : '. date('H:i:s')
+											'text' => 'Wita : '. date('H:i:s')
 										)
 								)
 							);
