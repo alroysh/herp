@@ -54,7 +54,7 @@
 					
 		}
 		else
-				if($pesan_datang=='sticker')
+				if($pesan_datang=='stickernya mana?')
 		{
 			
 			
@@ -64,7 +64,7 @@
 									array(
 											'type' => 'sticker',					
 											'packageId'=> '1',
-											'stickerId'=> '1'
+											'stickerId'=> '2'
 										)
 								)
 							);
