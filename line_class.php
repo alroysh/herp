@@ -153,3 +153,7 @@ function exec_url_aja($fullurl)
 			return($returned);
 	}
 	
+public function leaveGroup($groupId)
+    {
+        return $this->httpClient->post($this->endpointBase . '/v2/bot/group/' . urlencode($groupId) . '/leave', []);
+    }
