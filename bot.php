@@ -155,20 +155,7 @@ if($message['type']=='text')
 							)
 						);
 						
-		
-		$client->pushMessage($push);
-				
-	}
-	else{
-		$balas = array(
-							'replyToken' => $replyToken,														
-							'messages' => array(
-								array(
-										'type' => 'text',					
-										'text' => 'Halo.. Selamat datang di medantechno.com .        Untuk testing menu pilih 1,2,3,4,5 ... atau stiker'
-									)
-							)
-						);
+
 						
 	}
 }else if($message['type']=='sticker')
