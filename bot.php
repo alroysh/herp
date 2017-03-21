@@ -4,8 +4,8 @@ copyright @ medantechno.com
 2017
 */
 require_once('./line_class.php');
-$channelAccessToken = 'foHivR9RW1cwM7LwHhSBOPTAjGa8o8kbmomtLhC906UPPWoB1gIsMhCXh7oE9bGA4HcnU1iGygo06OflcHmU827yGqF3qGQtwPReKwcx+QTOKHKqRFcCDFysPvqeHESKUm4Ey4gPabfHkJeT5FzOdQdB04t89/1O/w1cDnyilFU='; //sesuaikan 
-$channelSecret = 'c1ab49d4f21251d9632f634a25605d24';//sesuaikan
+$channelAccessToken = ''; //sesuaikan 
+$channelSecret = '';//sesuaikan
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 //var_dump($client->parseEvents());
 //$_SESSION['userId']=$client->parseEvents()[0]['source']['userId'];
@@ -156,6 +156,21 @@ if($message['type']=='text')
 						);
 						
 		
+		$client->pushMessage($push);
+				
+	}
+	else{
+		$balas = array(
+							'replyToken' => $replyToken,														
+							'messages' => array(
+								array(
+										'type' => 'text',					
+										'text' => 'Halo.. Selamat datang di medantechno.com .        Untuk testing menu pilih 1,2,3,4,5 ... atau stiker'
+									)
+							)
+						);
+						
+	}
 }else if($message['type']=='sticker')
 {	
 	$balas = array(
@@ -175,4 +190,3 @@ $result =  json_encode($balas);
 //$result = ob_get_clean();
 file_put_contents('./balasan.json',$result);
 $client->replyMessage($balas);
-echo "OK";
