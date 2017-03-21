@@ -33,8 +33,7 @@
 	$messageid 	= $client->parseEvents()[0]['message']['id'];
 	$profil = $client->profil($userId);
 	$pesan_datang = $message['text'];
-	$wita= date_default_timezone_set['Asia/Singapore'];
-	$jam = date("H.i.s ");
+	$wita= date_default_timezone_set('Asia/Singapore');
 	//pesan bergambar
 	if($message['type']=='text')
 	{
