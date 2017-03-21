@@ -54,7 +54,7 @@
 					
 		}
 		else
-				if($pesan_datang=='Test')
+				if($pesan_datang=='sticker')
 		{
 			
 			
@@ -62,8 +62,9 @@
 								'replyToken' => $replyToken,														
 								'messages' => array(
 									array(
-											'type' => 'text',					
-											'text' => 'Halo  sianjing'.$profil->displayName.''
+											'type' => 'sticker',					
+											"packageId": "1",
+											"stickerId": "1"
 										)
 								)
 							);
