@@ -83,7 +83,7 @@
 			array_push($get_sub,$aa);	
 			$get_sub[] = array(
 										'type' => 'text',									
-										'text' => '\n[*] '.join(str(f) for f in dataResult).'
+										'text' => 'Halo '.$profil->displayName.', Anda memilih menu 2, harusnya gambar muncul.'
 									);
 			
 			$balas = array(
