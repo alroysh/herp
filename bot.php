@@ -64,7 +64,7 @@
 									array(
 											'type' => 'sticker',					
 											'packageId'=> '1',
-											'stickerId'=> '2'
+											'stickerId'=> '1'
 										)
 								)
 							);
