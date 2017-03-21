@@ -35,7 +35,7 @@
 	//pesan bergambar
 	if($message['type']=='text')
 	{
-		if($pesan_datang==array("Halo","halo","Helo","Hello","helo","hello","hay","hai","Hay","Hai","hay"))
+		if($pesan_datang=='Halo')
 		{
 			
 			
@@ -99,7 +99,7 @@
 					
 		}
 		else
-		if($pesan_datang=='4')
+		if($pesan_datang=='Jam')
 		{
 			
 			$balas = array(
@@ -107,7 +107,7 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => 'Jam Server Saya : '. date('Y-m-d H:i:s')
+											'text' => 'Jam Server Saya : 'date_default_timezone_set('Asia/Singapore');. date('H.i.s')
 										)
 								)
 							);
