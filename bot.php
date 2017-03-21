@@ -57,7 +57,7 @@
 					
 		}
 		else
-			if($pesan_datang=='$a-$b')
+			if($pesan_datang==$a-$b)
 		{
 			
 			
@@ -66,7 +66,7 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => '$pengurangan'
+											'text' => $pengurangan
 										)
 								)
 							);
