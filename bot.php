@@ -35,7 +35,7 @@
 	$profil = $client->profil($userId);
 	$pesan_datang = $message['text'];
 	$wita= date_default_timezone_set['Asia/Singapore'];
-	$wib= date_default_timezone_set['Asia/Singapore'];
+	$wib= date_default_timezone_set['Asia/Jakarta'];
 	//pesan bergambar
 	if($message['type']=='text')
 	{
