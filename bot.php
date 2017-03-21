@@ -11,7 +11,7 @@ $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 //$_SESSION['userId']=$client->parseEvents()[0]['source']['userId'];
 /*
 {
-  "replyToken": "nHuyWiB7yP5Zw52FIkcQobQuGDXCTA",
+  "replyToken": "U59a758501982ed747f8ca34cc3f457ff",
   "type": "message",
   "timestamp": 1462629479859,
   "source": {
