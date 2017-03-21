@@ -1,4 +1,4 @@
-	<?php
+<?php
 	/*
 	copyright @ medantechno.com
 	2017
@@ -66,7 +66,7 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => '$pengurangan'
+											'text' => . $pengurangan
 										)
 								)
 							);
