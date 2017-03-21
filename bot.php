@@ -95,7 +95,7 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => 'Fungsi PHP base64_encode medantechno.com :'. base64_encode("medantechno.com")
+											'text' => 'Fungsi PHP base64_encode eek :'. base64_encode("eek")
 										)
 								)
 							);
@@ -110,14 +110,14 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => 'Wita : '. $jam,
+											'text' => 'Wita : '. date('H.i.s')
 										)
 								)
 							);
 					
 		}
 		else
-		if($pesan_datang=='6')
+		if($pesan_datang=='Lokasi Bot')
 		{
 			
 			$balas = array(
@@ -126,9 +126,9 @@
 									array(
 											'type' => 'location',					
 											'title' => 'Lokasi Saya.. Klik Detail',					
-											'address' => 'Medan',					
-											'latitude' => '3.521892',					
-											'longitude' => '98.623596' 
+											'address' => 'McDonalds',					
+											'latitude' => '-8.700088',					
+											'longitude' => '115.178097' 
 										)
 								)
 							);
@@ -153,7 +153,7 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => 'Pesan ini dari medantechno.com'
+											'text' => 'Pesan ini dari Bot'
 										)
 								)
 							);
