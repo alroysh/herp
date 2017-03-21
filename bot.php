@@ -187,3 +187,4 @@ $result =  json_encode($balas);
 $result = ob_get_clean();
 file_put_contents('./balasan.json',$result);
 $client->replyMessage($balas);
+echo "OK";
