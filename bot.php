@@ -1,4 +1,4 @@
-	<?php
+		<?php
 	/*
 	copyright @ medantechno.com
 	2017
@@ -38,7 +38,7 @@
 	//pesan bergambar
 	if($message['type']=='text')
 	{
-		if($pesan_datang==('Halo,hae')
+		if($pesan_datang=='Halo,hae')
 		{
 			
 			
