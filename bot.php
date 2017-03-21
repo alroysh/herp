@@ -4,6 +4,7 @@
 	2017
 	*/
 	date_default_timezone_set['Asia/Singapore'];
+	date_default_timezone_set['Asia/Jakarta'];
 	require_once('./line_class.php');
 	$channelAccessToken = 'foHivR9RW1cwM7LwHhSBOPTAjGa8o8kbmomtLhC906UPPWoB1gIsMhCXh7oE9bGA4HcnU1iGygo06OflcHmU827yGqF3qGQtwPReKwcx+QTOKHKqRFcCDFysPvqeHESKUm4Ey4gPabfHkJeT5FzOdQdB04t89/1O/w1cDnyilFU='; //sesuaikan 
 	$channelSecret = 'c1ab49d4f21251d9632f634a25605d24';//sesuaikan
@@ -33,7 +34,8 @@
 	$messageid 	= $client->parseEvents()[0]['message']['id'];
 	$profil = $client->profil($userId);
 	$pesan_datang = $message['text'];
-	$wita= date_default_timezone_set('Asia/Singapore');
+	$wita= date_default_timezone_set['Asia/Singapore'];
+	$wib= date_default_timezone_set['Asia/Singapore'];
 	//pesan bergambar
 	if($message['type']=='text')
 	{
@@ -109,7 +111,7 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => 'Wita : '. date('H:i:s')
+											'text' => 'Wita : '. date('H.i.s') 'Wib : ' .date('H.i.s')
 										)
 								)
 							);
