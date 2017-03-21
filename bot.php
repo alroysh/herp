@@ -1,15 +1,12 @@
 <?php
-/*
-copyright @ medantechno.com
-2017
-*/
+
 require_once('./line_class.php');
 $channelAccessToken = 'foHivR9RW1cwM7LwHhSBOPTAjGa8o8kbmomtLhC906UPPWoB1gIsMhCXh7oE9bGA4HcnU1iGygo06OflcHmU827yGqF3qGQtwPReKwcx+QTOKHKqRFcCDFysPvqeHESKUm4Ey4gPabfHkJeT5FzOdQdB04t89/1O/w1cDnyilFU='; //sesuaikan 
 $channelSecret = 'c1ab49d4f21251d9632f634a25605d24';//sesuaikan
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
-//var_dump($client->parseEvents());
-//$_SESSION['userId']=$client->parseEvents()[0]['source']['userId'];
-/*
+var_dump($client->parseEvents());
+$_SESSION['userId']=$client->parseEvents()[0]['source']['userId'];
+
 {
   "replyToken": "U59a758501982ed747f8ca34cc3f457ff",
   "type": "message",
@@ -24,7 +21,7 @@ $client = new LINEBotTiny($channelAccessToken, $channelSecret);
     "text": "Hello, world"
   }
 }
-*/
+
 $userId 	= $client->parseEvents()[0]['source']['userId'];
 $replyToken = $client->parseEvents()[0]['replyToken'];
 $timestamp	= $client->parseEvents()[0]['timestamp'];
@@ -187,6 +184,6 @@ if($message['type']=='text')
 }
  
 $result =  json_encode($balas);
-//$result = ob_get_clean();
+$result = ob_get_clean();
 file_put_contents('./balasan.json',$result);
 $client->replyMessage($balas);
