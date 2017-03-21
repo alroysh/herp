@@ -54,7 +54,7 @@
 					
 		}
 		else
-				if($pesan_datang=='sticker1')
+				if($pesan_datang=='sticker')
 		{
 			
 			
