@@ -57,7 +57,7 @@
 					
 		}
 		else
-			if($pesan_datang=='$a-$b')
+			if($pesan_datang=='button')
 		{
 			
 			
