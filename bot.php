@@ -47,7 +47,7 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => 'Halo '.$profil->displayName.''
+											'text' => 'Halo 􀂲'.$profil->displayName.''
 										)
 								)
 							);
