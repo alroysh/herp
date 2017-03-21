@@ -33,6 +33,9 @@
 	$messageid 	= $client->parseEvents()[0]['message']['id'];
 	$profil = $client->profil($userId);
 	$pesan_datang = $message['text'];
+	$a=$_POST["a"];
+	$b=$_POST["b"];
+	$pengurangan = $a-$b;
 	$wita= date_default_timezone_set['Asia/Singapore'];
 	$jam = date("H.i.s ");
 	//pesan bergambar
@@ -48,6 +51,22 @@
 									array(
 											'type' => 'text',					
 											'text' => 'Halo'.$profil->displayName.''
+										)
+								)
+							);
+					
+		}
+		else
+			if($pesan_datang=='$a-$b')
+		{
+			
+			
+			$balas = array(
+								'replyToken' => $replyToken,														
+								'messages' => array(
+									array(
+											'type' => 'text',					
+											'text' => '$pengurangan'
 										)
 								)
 							);
@@ -175,7 +194,6 @@
 								)
 							);
 							
-
 							
 		}
 	}else if($message['type']=='sticker')
