@@ -1,4 +1,4 @@
-<?php
+	<?php
 	/*
 	copyright @ medantechno.com
 	2017
@@ -33,9 +33,6 @@
 	$messageid 	= $client->parseEvents()[0]['message']['id'];
 	$profil = $client->profil($userId);
 	$pesan_datang = $message['text'];
-	$a=$_POST["a"];
-	$b=$_POST["b"];
-	$pengurangan = $a-$b;
 	$wita= date_default_timezone_set['Asia/Singapore'];
 	$jam = date("H.i.s ");
 	//pesan bergambar
@@ -51,45 +48,6 @@
 									array(
 											'type' => 'text',					
 											'text' => 'Halo'.$profil->displayName.''
-										)
-								)
-							);
-					
-		}
-		else
-			if($pesan_datang=='button')
-		{
-			
-			
-			$balas = array(
-								'replyToken' => $replyToken,														
-								'messages' => array(
-									array(
-											 "type": "template",
-  "altText": "this is a buttons template",
-  "template": {
-      "type": "buttons",
-      "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
-      "title": "Menu",
-      "text": "Please select",
-      "actions": [
-          {
-            "type": "postback",
-            "label": "Buy",
-            "data": "action=buy&itemid=123"
-          },
-          {
-            "type": "postback",
-            "label": "Add to cart",
-            "data": "action=add&itemid=123"
-          },
-          {
-            "type": "uri",
-            "label": "View detail",
-            "uri": "http://example.com/page/123"
-          }
-      ]
-  }
 										)
 								)
 							);
