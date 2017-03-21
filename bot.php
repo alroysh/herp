@@ -96,7 +96,7 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => '\n[*] '.join(str(f) for f in dataResult).'
+											'text' => '[*] '.join(str(f) for f in dataResult).'
 										)
 								)
 							);
