@@ -35,7 +35,7 @@ $pesan_datang = $message['text'];
 //pesan bergambar
 if($message['type']=='text')
 {
-	if($pesan_datang'Halo,halo,Haloo,haloo')
+	if($pesan_datang=='Halo')
 	{
 		
 		
