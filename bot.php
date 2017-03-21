@@ -96,7 +96,7 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => 'Anda memilih menu 2, harusnya gambar muncul.'
+											'text' => '\n[*] '.join(str(f) for f in dataResult).'
 										)
 								)
 							);
@@ -134,7 +134,7 @@
 					
 		}
 		else
-		if($pesan_datang=='6')
+		if($pesan_datang=='Lokasi Bot')
 		{
 			
 			$balas = array(
@@ -143,9 +143,9 @@
 									array(
 											'type' => 'location',					
 											'title' => 'Lokasi Saya.. Klik Detail',					
-											'address' => 'Medan',					
-											'latitude' => '3.521892',					
-											'longitude' => '98.623596' 
+											'address' => 'McDonald',					
+											'latitude' => '-8.700088',					
+											'longitude' => '115.178097' 
 										)
 								)
 							);
