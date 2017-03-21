@@ -35,21 +35,18 @@ $pesan_datang = $message['text'];
 //pesan bergambar
 if($message['type']=='text')
 {
-	if($pesan_datang='Halo,alo,Helo,Mamamnih')
+	if($pesan_datang='Halo,halo,Helo,Hello,helo,hello,hay,hai,Hay,Hai,hay')
 	{
-		
-		
-		$balas = array(
-							'replyToken' => $replyToken,														
-							'messages' => array(
-								array(
-										'type' => 'text',					
-										'text' => 'Halo '.$profil->displayName.', Anda memilih menu 1,'
-									)
-							)
-						);
-				
-	}
+$balas = array(
+'replyToken' => $replyToken,														
+'messages' => array(
+array(
+'type' => 'text',					
+'text' => 'Halo '.$profil->displayName.''
+)
+)
+);
+}
 	else
 	if($pesan_datang=='2')
 	{
