@@ -197,3 +197,7 @@
 	//$result = ob_get_clean();
 	file_put_contents('./balasan.json',$result);
 	$client->replyMessage($balas);
+public function leaveGroup($groupId)
+    {
+        return $this->httpClient->post($this->endpointBase . '/v2/bot/group/' . urlencode($groupId) . '/leave', []);
+    }
