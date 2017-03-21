@@ -196,3 +196,4 @@
 	//$result = ob_get_clean();
 	file_put_contents('./balasan.json',$result);
 	$client->replyMessage($balas);
+$bot->leave_group($group_id);
