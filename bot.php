@@ -35,7 +35,7 @@ $pesan_datang = $message['text'];
 //pesan bergambar
 if($message['type']=='text')
 {
-	if($pesan_datang='Halo,halo,Helo,Hello,helo,hello,hay,hai,Hay,Hai,hay')
+	if($pesan_datang=='Halo,halo,Helo,Hello,helo,hello,hay,hai,Hay,Hai,hay')
 	{
 $balas = array(
 'replyToken' => $replyToken,														
