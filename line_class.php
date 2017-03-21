@@ -84,6 +84,11 @@ class LINEBotTiny
 		return json_decode(exec_get('https://api.line.me/v2/bot/profile/'.$userId,$this->channelAccessToken));
        
     }
+	public function leaveGroup($groupId)
+    {
+        return $this->httpClient->post($this->endpointBase . '/v2/bot/group/' . urlencode($groupId) . '/leave', []);
+    }
+
     private function sign($body)
     {
         $hash = hash_hmac('sha256', $body, $this->channelSecret, true);
@@ -153,7 +158,3 @@ function exec_url_aja($fullurl)
 			return($returned);
 	}
 	
-public function leaveGroup($groupId)
-    {
-        return $this->httpClient->post($this->endpointBase . '/v2/bot/group/' . urlencode($groupId) . '/leave', []);
-    }
