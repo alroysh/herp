@@ -66,7 +66,7 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => . $pengurangan
+											'text' => '$pengurangan'
 										)
 								)
 							);
