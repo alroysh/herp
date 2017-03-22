@@ -1,7 +1,7 @@
 /* 輸入申請的Line Developers 資料  */
-	$channel_id = "{1495903800}";
-	$channel_secret = "{c1ab49d4f21251d9632f634a25605d24}";
-	$channel_access_token = "{foHivR9RW1cwM7LwHhSBOPTAjGa8o8kbmomtLhC906UPPWoB1gIsMhCXh7oE9bGA4HcnU1iGygo06OflcHmU827yGqF3qGQtwPReKwcx+QTOKHKqRFcCDFysPvqeHESKUm4Ey4gPabfHkJeT5FzOdQdB04t89/1O/w1cDnyilFU=}";
+	$channel_id = "1495903800";
+	$channel_secret = "c1ab49d4f21251d9632f634a25605d24";
+	$channel_access_token = "foHivR9RW1cwM7LwHhSBOPTAjGa8o8kbmomtLhC906UPPWoB1gIsMhCXh7oE9bGA4HcnU1iGygo06OflcHmU827yGqF3qGQtwPReKwcx+QTOKHKqRFcCDFysPvqeHESKUm4Ey4gPabfHkJeT5FzOdQdB04t89/1O/w1cDnyilFU=";
 
 
 //  當有人發送訊息給bot時 我們會收到的json
