@@ -131,7 +131,7 @@
 			array_push($get_sub,$aa);	
 			$get_sub[] = array(
 						'type' => 'text',					
-				                'text' => 'Wita : '. date('H.i.s')
+				                'text' => 'Wib : '. date('H.i.s')
 									);
 		else
 		if($pesan_datang=='Lokasi Bot')
