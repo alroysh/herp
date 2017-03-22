@@ -80,7 +80,7 @@ class LINEBotTiny
 	
 	   public function leaveGroup($groupId)
     {
-        return $this->httpClient->post($this->endpointBase . 'https://api.line.me/v2/bot/group/{groupId}/leave' . urlencode($groupId) . '/leave', []);
+        return $this->httpClient->delete($this->endpointBase . 'https://api.line.me/v2/bot/group/{groupId}/leave' . urlencode($groupId) . '/leave', []);
     }
 
     public function profil($userId)
