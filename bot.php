@@ -47,7 +47,7 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => 'Halo '.$profil->displayName.''
+											'text' => 'Halo' .$profil->displayName.''
 										)
 								)
 							);
@@ -63,7 +63,7 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => 'Status Message kamu :'.$profil->statusMessage.''
+											'text' => 'Status Message kamu : '.$profil->statusMessage.''
 										)
 								)
 							);
