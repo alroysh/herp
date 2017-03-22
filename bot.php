@@ -32,7 +32,6 @@
 	$message 	= $client->parseEvents()[0]['message'];
 	$messageid 	= $client->parseEvents()[0]['message']['id'];
 	$profil = $client->profil($userId);
-	$leave=$client->leaveGroup($groupId);
 	$pesan_datang = $message['text'];
 	$wita= date_default_timezone_set['Asia/Singapore'];
 	$jam = date("H.i.s ");
@@ -49,21 +48,6 @@
 									array(
 											'type' => 'text',					
 											'text' => 'Halo'.$profil->displayName.''
-										)
-								)
-							);
-					
-		}
-		if($pesan_datang=='Bye')
-		{
-			
-			
-			$balas = array(
-								'replyToken' => $replyToken,														
-								'messages' => array(
-									array(
-											'type' => 'text',					
-											'text' => 'Selamat Tinggal'.$leave .''
 										)
 								)
 							);
