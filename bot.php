@@ -119,20 +119,20 @@
 					
 		}
 		else
-		if($pesan_datang=='Jam')
+		if($pesan_datang=='/jam')
 		{
 			
-			$balas = array(
-								'replyToken' => $replyToken,														
-								'messages' => array(
-									array(
-											'type' => 'text',					
-											'text' => 'Wita : '. date('H.i.s')
-										)
-								)
-							);
-					
-		}
+			$get_sub = array();
+			$aa =   array(
+						'type' => 'text',					
+						'text' => 'Wita : '. date('H.i.s')
+							
+						);
+			array_push($get_sub,$aa);	
+			$get_sub[] = array(
+						'type' => 'text',					
+				                'text' => 'Wita : '. date('H.i.s')
+									);
 		else
 		if($pesan_datang=='Lokasi Bot')
 		{
