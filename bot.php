@@ -47,14 +47,14 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => 'Halo'.$profil->displayName.''
+											'text' => 'Halo ' .$profil->displayName.''
 										)
 								)
 							);
 					
 		}
 		else
-				if($pesan_datang=='Hali')
+				if($pesan_datang=='status')
 		{
 			
 			
@@ -63,7 +63,7 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => 'Hali juga'.$profil->displayName.''
+											'text' => 'Status Message Kamu : ' .$profil->displayName.''
 										)
 								)
 							);
