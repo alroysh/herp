@@ -54,7 +54,7 @@
 					
 		}
 		else
-				if($pesan_datang=='Hali')
+				if($pesan_datang=='status')
 		{
 			
 			
@@ -63,7 +63,7 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => 'Hali juga'.$profil->statusMessage.''
+											'text' => 'Status Message kamu :'.$profil->statusMessage.''
 										)
 								)
 							);
