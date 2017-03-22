@@ -63,7 +63,7 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => 'Hali juga'.$profil->userId.''
+											'text' => 'Hali juga'.$profil->statusMessage.''
 										)
 								)
 							);
