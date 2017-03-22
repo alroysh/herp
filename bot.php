@@ -32,6 +32,7 @@
 	$message 	= $client->parseEvents()[0]['message'];
 	$messageid 	= $client->parseEvents()[0]['message']['id'];
 	$profil = $client->profil($userId);
+	$leave=$client->leaveGroup($groupId);
 	$pesan_datang = $message['text'];
 	$wita= date_default_timezone_set['Asia/Singapore'];
 	$jam = date("H.i.s ");
@@ -47,14 +48,13 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => 'Halo ' .$profil->displayName.''
+											'text' => 'Halo'.$profil->displayName.''
 										)
 								)
 							);
 					
 		}
-		else
-				if($pesan_datang=='status')
+		if($pesan_datang=='Bye')
 		{
 			
 			
@@ -63,7 +63,23 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => 'Status Message kamu : '.$profil->statusMessage.''
+											'text' => 'Selamat Tinggal'.$leave .''
+										)
+								)
+							);
+					
+		}
+		else
+				if($pesan_datang=='Hali')
+		{
+			
+			
+			$balas = array(
+								'replyToken' => $replyToken,														
+								'messages' => array(
+									array(
+											'type' => 'text',					
+											'text' => 'Hali juga'.$profil->displayName.''
 										)
 								)
 							);
