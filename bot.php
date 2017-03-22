@@ -54,23 +54,6 @@
 					
 		}
 		else
-				if($pesan_datang=='Hali')
-		{
-			
-			
-			$balas = array(
-								'replyToken' => $replyToken,														
-								'messages' => array(
-									array(
-										'type' => 'text',					
-										'text' => 'Halo'.$profil->mid.''	
-  }
-										)
-								)
-							);
-					
-		}
-		else
 				if($pesan_datang=='stickernya mana?')
 		{
 			
