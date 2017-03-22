@@ -3,6 +3,7 @@
 	copyright @ medantechno.com
 	2017
 	*/
+	date_default_timezone_set('Asia/Singapore');
 	require_once('./line_class.php');
 	$channelAccessToken = 'foHivR9RW1cwM7LwHhSBOPTAjGa8o8kbmomtLhC906UPPWoB1gIsMhCXh7oE9bGA4HcnU1iGygo06OflcHmU827yGqF3qGQtwPReKwcx+QTOKHKqRFcCDFysPvqeHESKUm4Ey4gPabfHkJeT5FzOdQdB04t89/1O/w1cDnyilFU='; //sesuaikan 
 	$channelSecret = 'c1ab49d4f21251d9632f634a25605d24';//sesuaikan
@@ -32,10 +33,8 @@
 	$messageid 	= $client->parseEvents()[0]['message']['id'];
 	$profil = $client->profil($userId);
 	$pesan_datang = $message['text'];
-	$tz = 'Asia/Singapore';
-	$timestamp = time();
-	$dt = new DateTime("now", new DateTimeZone($tz)); //first argument "must" be a string
-	$dt->setTimestamp($timestamp); //adjust the object to correct timestamp
+	$wita= date_default_timezone_set['Asia/Singapore'];
+	$jam = date("H.i.s ");
 	//pesan bergambar
 	if($message['type']=='text')
 	{
@@ -49,6 +48,39 @@
 									array(
 											'type' => 'text',					
 											'text' => 'Halo'.$profil->displayName.''
+										)
+								)
+							);
+					
+		}
+		else
+				if($pesan_datang=='Hali')
+		{
+			
+			
+			$balas = array(
+								'replyToken' => $replyToken,														
+								'messages' => array(
+									array(
+											 "type": "template",
+  "altText": "this is a confirm template",
+  "template": {
+      "type": "confirm",
+      "text": "Are you sure?",
+      "actions": [
+          {
+            "type": "message",
+            "label": "Yes",
+            "text": "yes"
+          },
+          {
+            "type": "message",
+            "label": "No",
+            "text": "no"
+          }
+      ]
+  }
+  }
 										)
 								)
 							);
