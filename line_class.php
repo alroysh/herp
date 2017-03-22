@@ -78,14 +78,11 @@ class LINEBotTiny
        
     }
 	
-	 /*public function leaveGroup($groupId)
+	   public function leaveGroup($groupId)
     {
-     return $this->httpClient->post($this->endpointBase . 'https://api.line.me/v2/bot/group/{groupId}/leave' . urlencode($groupId) . '/leave', []);
-    }*/
-public function profil($groupId)
-    {
-		return json_decode(exec_get('https://api.line.me/v2/bot/group/'.$groupId,$this->channelAccessToken));
-	}
+        return $this->httpClient->post($this->endpointBase . 'https://api.line.me/v2/bot/group/{groupId}/leave' . urlencode($groupId) . '/leave', []);
+    }
+
     public function profil($userId)
     {
       
