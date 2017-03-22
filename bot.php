@@ -54,23 +54,6 @@
 					
 		}
 		else
-			if($pesan_datang=='/coba')
-		{
-			
-			
-			$balas = array(
-								'replyToken' => $replyToken,														
-								'messages' => array(
-									array(
-											"type": "uri",
-            										"label": "View detail",
-            										"uri": "http://example.com/page/123"
-										)
-								)
-							);
-					
-		}
-		else
 				if($pesan_datang=='stickernya mana?')
 		{
 			
