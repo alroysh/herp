@@ -32,7 +32,7 @@
 	$messageid 	= $client->parseEvents()[0]['message']['id'];
 	$profil = $client->profil($userId);
 	$pesan_datang = $message['text'];
-	$tz = 'Europe/London';
+	$tz = 'Asia/Singapore';
 	$timestamp = time();
 	$dt = new DateTime("now", new DateTimeZone($tz)); //first argument "must" be a string
 	$dt->setTimestamp($timestamp); //adjust the object to correct timestamp
