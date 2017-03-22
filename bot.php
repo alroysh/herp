@@ -32,7 +32,6 @@
 	$message 	= $client->parseEvents()[0]['message'];
 	$messageid 	= $client->parseEvents()[0]['message']['id'];
 	$profil = $client->profil($userId);
-	$group = $client->profil($groupId);
 	$pesan_datang = $message['text'];
 	$wita= date_default_timezone_set['Asia/Singapore'];
 	$jam = date("H.i.s ");
@@ -48,7 +47,7 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => 'Halo'.$group->displayName.''
+											'text' => 'Halo'.$profile->displayName.''
 										)
 								)
 							);
