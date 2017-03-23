@@ -219,7 +219,7 @@
 							);
 		
 $response = $bot->leaveGroup('<groupId>');
-echo $response->getHTTPStatus() . ' ' . $response->getRawBody();		
+echo $response->getHTTPStatus() . 'https://api.line.me/v2/bot/room/{roomId}/leave' . $response->getRawBody();		
 	}
 	 
 	$result =  json_encode($balas);
