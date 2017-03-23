@@ -218,7 +218,7 @@
 								)
 							);
 		
-$response = $bot->leaveRoom('<groupId>');
+$response = $bot->leaveGroup('<groupId>');
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();		
 	}
 	 
