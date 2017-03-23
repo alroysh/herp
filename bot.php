@@ -31,7 +31,6 @@
 	$pesan_datang = $message['text'];
 	$wita= date_default_timezone_set['Asia/Singapore'];
 	$jam = date("H.i.s ");
-	$displayName = $user['contacts'][0]['displayName'];
 	//pesan bergambar
 	if($message['type']=='text')
 	{
@@ -44,7 +43,7 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => 'Halo ' .$displayName
+											'text' => 'Halo ' .$profil->displayName.''
 										)
 								)
 							);
@@ -219,10 +218,31 @@
 								)
 							);
 		
-$response = $bot->leaveGroup('<groupId>');
-echo $response->getHTTPStatus() . 'https://api.line.me/v2/bot/room/{roomId}/leave' . $response->getRawBody();		
+$response = $bot->leaveRoom('<groupId>');
+echo $response->getHTTPStatus() . ' ' . $response->getRawBody();		
 	}
-	 
+	 if (strtolower(trim($text)) === "whoami") {
+                    $fromMid = $message->getFromMid();
+                    $user = $sdk->getUserProfile($fromMid);
+                    $displayName = $user['contacts'][0]['displayName'];
+ 
+                    $reply = "You are $displayName, and your mid is:\n\n$fromMid";
+ 
+                    // Send the mid back to the sender and check if the message was delivered
+                    $result = $sdk->sendText([$fromMid], $reply);
+                    if(!$result instanceof LINE\LINEBot\Response\SucceededResponse) {
+                        error_log('LINE error: ' . json_encode($result) }
+                } else {
+                    // Process normally, or do nothing
+                }
+            } else {
+                // Process other types of LINE messages like image, video, sticker, etc.
+            }
+        }
+    } // Else, error
+} else {
+    error_log('LINE signatures didn\'t match: ' . $signature);
+}
 	$result =  json_encode($balas);
 	//$result = ob_get_clean();
 	file_put_contents('./balasan.json',$result);
