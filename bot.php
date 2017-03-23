@@ -59,7 +59,7 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => 'Link Foto Kamu : ' .$profil->pictureUrl.''
+											'text' => 'Link Foto Kamu \n\n: ' .$profil->pictureUrl.''
 										)
 								)
 							);
