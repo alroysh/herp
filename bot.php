@@ -54,6 +54,22 @@
 					
 		}
 		else
+				if($pesan_datang=='link fotoku')
+		{
+			
+			
+			$balas = array(
+								'replyToken' => $replyToken,														
+								'messages' => array(
+									array(
+											'type' => 'text',					
+											'text' => 'Status Message Kamu : ' .$profil->pictureUrl.''
+										)
+								)
+							);
+					
+		}
+		else
 				if($pesan_datang=='status')
 		{
 			
