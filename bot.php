@@ -221,7 +221,13 @@
 $response = $bot->leaveRoom('<groupId>');
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();		
 	}
-	 if (strtolower(trim($text)) === "whoami") {
+	if($signature && $sdk->validateSignature($postdata, $signature)) {
+    // Next, extract the messages
+    if(is_array($messages)) {
+        foreach ($messages as $message) {
+            if ($message instanceof LINEBot\Receive\Message\Text) {
+                $text = $message->getText();
+                if (strtolower(trim($text)) === "whoami") {
                     $fromMid = $message->getFromMid();
                     $user = $sdk->getUserProfile($fromMid);
                     $displayName = $user['contacts'][0]['displayName'];
@@ -231,7 +237,8 @@ echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
                     // Send the mid back to the sender and check if the message was delivered
                     $result = $sdk->sendText([$fromMid], $reply);
                     if(!$result instanceof LINE\LINEBot\Response\SucceededResponse) {
-                        error_log('LINE error: ' . json_encode($result) }
+                        error_log('LINE error: ' . json_encode($result));
+                    }
                 } else {
                     // Process normally, or do nothing
                 }
