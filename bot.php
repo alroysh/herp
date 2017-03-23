@@ -44,7 +44,7 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => 'Halo $displayName'
+											'text' => 'Halo ' .$displayName
 										)
 								)
 							);
