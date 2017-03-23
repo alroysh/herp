@@ -1,8 +1,4 @@
 	<?php
-	/*
-	copyright @ medantechno.com
-	2017
-	*/
 	date_default_timezone_set('Asia/Singapore');
 	require_once('./line_class.php');
 	$channelAccessToken = 'foHivR9RW1cwM7LwHhSBOPTAjGa8o8kbmomtLhC906UPPWoB1gIsMhCXh7oE9bGA4HcnU1iGygo06OflcHmU827yGqF3qGQtwPReKwcx+QTOKHKqRFcCDFysPvqeHESKUm4Ey4gPabfHkJeT5FzOdQdB04t89/1O/w1cDnyilFU='; //sesuaikan 
@@ -63,7 +59,7 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => 'Status Message Kamu : ' .$profil->pictureUrl.''
+											'text' => 'Link Foto Kamu : ' .$profil->pictureUrl.''
 										)
 								)
 							);
