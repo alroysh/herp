@@ -31,6 +31,7 @@
 	$pesan_datang = $message['text'];
 	$wita= date_default_timezone_set['Asia/Singapore'];
 	$jam = date("H.i.s ");
+	$displayName = $user['contacts'][0]['displayName'];
 	//pesan bergambar
 	if($message['type']=='text')
 	{
@@ -43,7 +44,7 @@
 								'messages' => array(
 									array(
 											'type' => 'text',					
-											'text' => 'Halo ' .$profil->displayName.''
+											'text' => 'Halo $displayName'
 										)
 								)
 							);
